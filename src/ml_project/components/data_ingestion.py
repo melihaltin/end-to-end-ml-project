@@ -31,6 +31,7 @@ class DataIngestion:
         Function returns None
         """
         unzip_path = self.config.unzip_dir
+        print(f"Unzipping the file to {unzip_path}")
         os.makedirs(unzip_path, exist_ok=True)
         with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
             zip_ref.extractall(unzip_path)
