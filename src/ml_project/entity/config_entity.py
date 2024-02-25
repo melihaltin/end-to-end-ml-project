@@ -23,3 +23,19 @@ class DataTransformationConfig:
     data_path: Path    
     
     
+
+
+@dataclass(frozen=True)
+class ModelTrainingConfig:
+    root_dir : Path
+    X_train_data_path: Path
+    X_test_data_path: Path
+    y_train_data_path: Path
+    y_test_data_path: Path
+    model_name : str
+    alpha: float
+    n_estimators: int
+    max_depth: int
+    learning_rate: float
+    
+    

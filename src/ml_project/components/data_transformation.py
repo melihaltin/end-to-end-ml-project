@@ -91,7 +91,7 @@ class DataTransformation:
         one_hot_columns = ['job', 'marital', 'education', 'contact', 'poutcome']
         label_columns = ['age_group' , 'date_month'] 
         
-        pd.get_dummies(self.df, columns=one_hot_columns, drop_first=True)
+        self.df = pd.get_dummies(self.df, columns=one_hot_columns, drop_first=True ,  dtype='int64' )
         
         le = LabelEncoder()
         for col in label_columns:
@@ -122,10 +122,10 @@ class DataTransformation:
     def transform(self):
         self.month_transformer()
         self.age_transformer()
+        self.scaling()
         self.binary()
         self.categorical_encoding()
-        self.scaling()
-        return self.train_test_split()    
+        self.train_test_split()
         
             
         

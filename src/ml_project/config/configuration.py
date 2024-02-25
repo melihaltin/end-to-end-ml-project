@@ -1,6 +1,6 @@
 from ml_project.constants import *
 from ml_project.utils.common import read_yaml , create_directories
-from ml_project.entity.config_entity import DataIngestionConfig, DataTransformationConfig, DataValidationConfig
+from ml_project.entity.config_entity import DataIngestionConfig, DataTransformationConfig, DataValidationConfig, ModelTrainingConfig
 
 class ConfigurationManager:
     def __init__(
@@ -57,3 +57,53 @@ class ConfigurationManager:
 
         return data_transformation_config
     
+    
+    
+    def get_model_training_config(self) -> ModelTrainingConfig:
+        config = self.config.model_training
+        params = self.params.LGBM
+        schema = self.schema.TARGET
+        
+        model_training_config = ModelTrainingConfig(
+            root_dir= Path(config.root_dir),
+            X_train_data_path= Path(config.X_train_data_path),
+            X_test_data_path= Path(config.X_test_data_path),
+            y_train_data_path= Path(config.y_train_data_path),
+            y_test_data_path= Path(config.y_test_data_path),
+            model_name= config.model_name,
+            alpha= params.alpha,
+            n_estimators= params.n_estimators,
+            max_depth= params.max_depth,
+            learning_rate= params.learning_rate
+        ) 
+        
+        return model_training_config
+    
+    
+    def __init__(self, config_filepath= CONFIG_FILE_PATH , params_filepath=PARAMS_FILE_PATH ,schema_filepath=SCHEMA_FILE_PATH ):
+        self.config = read_yaml(config_filepath)
+        self.params = read_yaml(params_filepath)
+        self.schema = read_yaml(schema_filepath)
+        
+        create_directories([self.config.model_training.root_dir])
+        
+        
+    def get_model_training_config(self) -> ModelTrainingConfig:
+        config = self.config.model_training
+        params = self.params.LGBM
+        schema = self.schema.TARGET
+        
+        model_training_config = ModelTrainingConfig(
+            root_dir= Path(config.root_dir),
+            X_train_data_path= Path(config.X_train_data_path),
+            X_test_data_path= Path(config.X_test_data_path),
+            y_train_data_path= Path(config.y_train_data_path),
+            y_test_data_path= Path(config.y_test_data_path),
+            model_name= config.model_name,
+            alpha= params.alpha,
+            n_estimators= params.n_estimators,
+            max_depth= params.max_depth,
+            learning_rate= params.learning_rate
+        ) 
+        
+        return model_training_config    
