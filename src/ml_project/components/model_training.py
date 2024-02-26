@@ -23,6 +23,6 @@ class ModelTrainer:
                              learning_rate=self.config.learning_rate)
         
         clf.fit(X_train, y_train)
-        
+        os.makedirs(self.config.root_dir, exist_ok=True)
         joblib.dump(clf, os.path.join(self.config.root_dir, f"{self.config.model_name}.joblib"))
         

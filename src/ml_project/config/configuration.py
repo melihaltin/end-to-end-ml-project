@@ -1,6 +1,6 @@
 from ml_project.constants import *
 from ml_project.utils.common import read_yaml , create_directories
-from ml_project.entity.config_entity import DataIngestionConfig, DataTransformationConfig, DataValidationConfig, ModelTrainingConfig
+from ml_project.entity.config_entity import DataIngestionConfig, DataTransformationConfig, DataValidationConfig, ModelEvaluationConfig, ModelTrainingConfig
 
 class ConfigurationManager:
     def __init__(
@@ -107,3 +107,33 @@ class ConfigurationManager:
         ) 
         
         return model_training_config    
+    
+    
+    def __init__(self, config_filepath= CONFIG_FILE_PATH , params_filepath=PARAMS_FILE_PATH ,schema_filepath=SCHEMA_FILE_PATH ):
+        self.config = read_yaml(config_filepath)
+        self.params = read_yaml(params_filepath)
+        self.schema = read_yaml(schema_filepath)
+        
+        create_directories([self.config.artifacts_root])
+        
+        
+    def get_model_evaluation_config(self):
+        config = self.config.model_evaluation
+        params = self.params.LGBM
+        schema = self.schema.TARGET
+        
+        create_directories([config.root_dir])
+        
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir=config.root_dir,
+            X_test_data_path=Path(config.X_test_data_path),
+            y_test_data_path=Path(config.y_test_data_path),
+            model_path=Path(config.model_path),
+            all_params=params,
+            metric_file_path=Path(config.metric_file_path),
+            target_column=schema.y,
+            mlflow_uri=config.mlflow_uri
+            
+        )
+        
+        return model_evaluation_config
