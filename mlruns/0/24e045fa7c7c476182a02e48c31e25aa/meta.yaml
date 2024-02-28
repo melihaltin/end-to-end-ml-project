@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/development/Machine-Learning/end-to-end-ml-project/mlruns/0/24e045fa7c7c476182a02e48c31e25aa/artifacts
+end_time: 1709037840274
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 24e045fa7c7c476182a02e48c31e25aa
+run_name: thundering-mare-511
+run_uuid: 24e045fa7c7c476182a02e48c31e25aa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709037837133
+status: 3
+tags: []
+user_id: melih

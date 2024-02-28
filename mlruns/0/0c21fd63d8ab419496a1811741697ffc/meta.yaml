@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/development/Machine-Learning/end-to-end-ml-project/mlruns/0/0c21fd63d8ab419496a1811741697ffc/artifacts
+end_time: 1709123697787
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0c21fd63d8ab419496a1811741697ffc
+run_name: wise-shrew-390
+run_uuid: 0c21fd63d8ab419496a1811741697ffc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709123689702
+status: 3
+tags: []
+user_id: melih

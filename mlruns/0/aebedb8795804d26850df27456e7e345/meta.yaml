@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/development/Machine-Learning/end-to-end-ml-project/mlruns/0/aebedb8795804d26850df27456e7e345/artifacts
+end_time: 1709123699680
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: aebedb8795804d26850df27456e7e345
+run_name: capable-stag-542
+run_uuid: aebedb8795804d26850df27456e7e345
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709123692544
+status: 3
+tags: []
+user_id: melih

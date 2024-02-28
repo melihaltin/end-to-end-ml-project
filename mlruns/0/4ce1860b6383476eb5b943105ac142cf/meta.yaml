@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/development/Machine-Learning/end-to-end-ml-project/mlruns/0/4ce1860b6383476eb5b943105ac142cf/artifacts
+end_time: 1709123696592
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4ce1860b6383476eb5b943105ac142cf
+run_name: debonair-fly-198
+run_uuid: 4ce1860b6383476eb5b943105ac142cf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709123686927
+status: 3
+tags: []
+user_id: melih

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/development/Machine-Learning/end-to-end-ml-project/mlruns/0/9aaeee3538d5401a952d98e89c172801/artifacts
+end_time: 1709139140960
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9aaeee3538d5401a952d98e89c172801
+run_name: delightful-crab-30
+run_uuid: 9aaeee3538d5401a952d98e89c172801
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709139136958
+status: 3
+tags: []
+user_id: melih

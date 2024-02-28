@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/development/Machine-Learning/end-to-end-ml-project/mlruns/0/416eb6a978754e2aaef5a2e988a44af7/artifacts
+end_time: 1709037754051
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 416eb6a978754e2aaef5a2e988a44af7
+run_name: rebellious-sloth-154
+run_uuid: 416eb6a978754e2aaef5a2e988a44af7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709037751013
+status: 3
+tags: []
+user_id: melih

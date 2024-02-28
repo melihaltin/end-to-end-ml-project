@@ -8,11 +8,11 @@ from ml_project.entity.config_entity import DataTransformationConfig
 
 class DataTransformation:
 
-    def __init__(self, config: DataTransformationConfig):
+    def __init__(self, config: DataTransformationConfig , path:str):
         self.config = config
         self.df = pd.read_csv(self.config.data_path , sep=';')
 
-    def binary_encoding(df, columns, positive_value):
+    def binary_encoding(df, columns, positive_value="yes"):
         for col in columns:
             df[col] = df[col].apply(lambda x: 1 if x == positive_value else 0)
         return df     
@@ -126,7 +126,7 @@ class DataTransformation:
         self.binary()
         self.categorical_encoding()
         self.train_test_split()
-        
+        return self.df
             
         
     
